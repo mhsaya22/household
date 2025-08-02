@@ -1,7 +1,5 @@
 import { Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, type CSSProperties } from '@mui/material'
 import React, { type FC } from 'react'
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import MailIcon from '@mui/icons-material/Mail'
 import HomeIcon from '@mui/icons-material/Home';
 import EqualizerIcon from '@mui/icons-material/Equalizer';
 import { NavLink, useNavigate } from 'react-router-dom';

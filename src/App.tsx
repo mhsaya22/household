@@ -5,9 +5,12 @@ import Home from './pages/Home';
 import Report from './pages/Report';
 import NoMatch from './pages/NoMatch';
 import AppLayout from './Components/Layout/AppLayout';
+import {theme} from './theme/theme';
+import { ThemeProvider } from '@mui/material';
 
 function App() {
   return (
+    <ThemeProvider theme={theme}>
 <Router>
     <Routes>
       <Route path='/' element={<AppLayout />}>
@@ -17,6 +20,7 @@ function App() {
        </Route>
     </Routes>
 </Router>
+</ThemeProvider>
   );
 }
 
