@@ -8,7 +8,6 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Outlet } from 'react-router-dom';
 import SideBar from './Common/SideBar';
-import { grey } from '@mui/material/colors';
 
 
 const drawerWidth = 240;
@@ -35,13 +34,13 @@ export default function AppLayout() {
 
 
   return (
-    <Box sx={{ display: 'flex', bgcolor: grey[300] ,minHeight:"100vh"}}>
+    <Box sx={{ display: 'flex', bgcolor:(theme)=> theme.palette.grey[100],minHeight:"100vh"}}>
       <CssBaseline />
       <AppBar
         position="fixed"
         sx={{
-          width: { md: `calc(100% - ${drawerWidth}px)` },
-          ml: { md: `${drawerWidth}px` },
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          ml: { sm: `${drawerWidth}px` },
         }}
       >
         <Toolbar>
@@ -50,7 +49,7 @@ export default function AppLayout() {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ md: 2, display: { md: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' } }}
           >
             <MenuIcon />
           </IconButton>
@@ -68,7 +67,7 @@ export default function AppLayout() {
        
       <Box
         component="main"
-        sx={{ flexGrow: 1, p: 3, width: { md: `calc(100% - ${drawerWidth}px)` } }}
+        sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
        <Toolbar/>
       <Outlet/>
